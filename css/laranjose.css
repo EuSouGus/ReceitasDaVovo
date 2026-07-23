@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+    --fonte-padrao: "Crimson Text", serif;
+    --fonte-secundaria: "Dancing Script", cursive;
+    --cor-fundo: #EEECD5;
+    --cor-botoes: #F3B13C;
+    --cor-letras: #0F198A;
+    --cor-detalhes-fundo: #4B84E1;
+    --cor-fonte-detalhes: #EEECD5;
+    --cor-section: #F6DC99;
+    --cor-navbar: #0F198A;
+}
+
+main h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-letras);
+    margin: 10px;
+}
+
+main p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fonte-padrao);
+    color: var(--cor-letras);
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+/* Chat laranjosé */
+
+.laranjose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.laranjose img {
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    height: 300px;
+    width: 550px;
+    margin: 10px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    border-radius: 25px;
+}
+
+@media (max-width: 850px) {
+    .laranjose {
+        flex-direction: column-reverse;
+    }
+
+    .laranjose img {
+        height: 300px;
+    }
+
+    .chat-box {
+        width: 350px;
+    }
+}
+
+.message {
+    padding: 8px 12px;
+    margin: 8px 0;
+}
+
+.bot-message {
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--cor-navbar);
+    color: var(--cor-section);
+    width: fit-content;
+    border-radius: 15px;
+    font-family: var(--fonte-padrao);
+    box-shadow: 4px 2px 22px #3f2c0956;
+}
+
+.user-message {
+    align-self: flex-end;
+    width: fit-content;
+    margin-left: auto;
+    background-color: var(--cor-botoes);
+    color: var(--cor-letras);
+    border-radius: 15px;
+    padding: 10px 15px;
+    font-family: var(--fonte-padrao);
+    box-shadow: 4px 2px 22px #3f2c0956;
+}
+
+#stepTipo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#stepTipo button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    background-color: var(--cor-botoes);
+    border: none;
+    padding: 8px 10px;
+    font-family: var(--fonte-padrao);
+    font-weight: bold;
+    color: var(--cor-letras);
+    border-radius: 5px;
+    font-size: medium;
+    box-shadow: 4px 2px 22px #3f2c0945;
+    cursor: pointer;
+}
+
+#stepTipo button:hover {
+    transform: translateY(-3px);
+    transition: ease-in 0.2s;
+    box-shadow: 11px 9px 22px #3f2c0961;
+}
+
+iconify-icon {
+    font-size: 30px;
+    color: var(--cor-letras);
+}
+
+.icone {
+    font-size: 40px;
+    color: var(--cor-botoes);
+}
+
+.recipe-card {
+    border-radius: 15px;
+    font-family: var(--fonte-padrao);
+    background: var(--cor-section);
+}
+
+#recipeModal {
+    display: none;
+    position: fixed;
+
+    flex-direction: column;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 700px;
+    max-width: 90vw;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+
+    z-index: 1000;
+
+    font-family: var(--fonte-padrao);
+}
+
+#buscar:hover {
+    background-color: #0F198A;
+    color: #F3B13C;
+}
+
+#voltar:hover {
+    background-color: #0F198A;
+    color: #F3B13C;
+}
+
+#recipeModal button {
+    background-color: var(--cor-botoes);
+    padding: 5px;
+    border-radius: 4px;
+    font-family: var(--fonte-padrao);
+    color: var(--cor-letras);
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 4px 2px 22px #3f2c0945;
+    cursor: pointer;
+    width: 90px;
+}
+
+#recipeModal button:hover {
+    background-color: #0F198A;
+    color: #F3B13C;
+}
+
+#recipeModal h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fonte-secundaria);
+    margin: 10px;
+}
+
+#modalObrigatorios {
+    margin: 20px;
+}
+
+#modalOpcionais {
+    margin: 20px;
+}
+
+#modalPreparo {
+    margin: 20px;
+}
+
+#stepReiniciar {
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#stepReiniciar button {
+    border: none;
+    font-weight: bold;
+    background-color: var(--cor-botoes);
+    font-family: var(--fonte-padrao);
+    color: var(--cor-letras);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 2px 22px #3f2c0945;
+    cursor: pointer;
+}
+
+#stepReiniciar button:hover {
+    background-color: #0F198A;
+    color: #F3B13C;
+}
+
+/* Selecionar ingredientes */
+
+#stepIngredientes {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 340px;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+#stepIngredientes h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fonte-padrao);
+    color: var(--cor-letras);
+}
+
+#stepIngredientes button {
+    flex-direction: row;
+    background-color: var(--cor-botoes);
+    border: none;
+    padding: 8px 10px;
+    margin: 10px;
+    font-family: var(--fonte-padrao);
+    font-weight: bold;
+    color: var(--cor-letras);
+    border-radius: 5px;
+    font-size: medium;
+    box-shadow: 4px 2px 22px #3f2c0945;
+    cursor: pointer;
+}
+
+.acoes {
+    display: flex;
+    justify-content: center;
+}
+
+.stepIngredientes button:hover {
+    background-color: #0F198A;
+}
+
+.ing-label {
+    background-color: #0F198A;
+    color: #F6DC99;
+    font-family: var(--fonte-padrao);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.selected {
+    background-color: var(--cor-botoes);
+    color: var(--cor-letras);
+}
+
+#ingredientsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+    color: var(--cor-letras);
+    font-family: var(--fonte-padrao);
+    font-size: large;
+    margin: 15px 10px 15px 10px;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Laranjose - Receitas da Vovó</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laranjose.css">
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Logo Receitas">
+        <a href="index.html"><iconify-icon icon="ic:round-home" class="icone"></iconify-icon></a>
+    </header>
+
+    <main>
+        <h1>Assistente Virtual Laranjosé</h1>
+        <p>Escolha as opções abaixo para descobrir o que você pode cozinhar hoje com os ingredientes que tem em casa!
+        </p>
+
+        <div class="bot">
+            <div class="chat">
+                <div class="laranjose">
+                    <img src="img/louro.png" alt="" srcset="">
+                    <div id="chatBox" class="chat-box">
+                        <div class="message bot-message">
+                            Olá! Que tipo de receita você está procurando hoje?
+                        </div>
+                        <div id="stepTipo" class="control-step active">
+                            <button onclick="selecionarTipo('doce')"><iconify-icon
+                                    icon="streamline-plump:cake-slice-solid"></iconify-icon>Doces</button>
+                            <button onclick="selecionarTipo('salgado')"><iconify-icon
+                                    icon="streamline-plump:burger-solid"></iconify-icon>Salgadas</button>
+                            <button onclick="selecionarTipo('tanto_faz')"><iconify-icon
+                                    icon="streamline-plump:chef-toque-hat-solid"></iconify-icon>Tanto Faz</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="stepIngredientes" class="control-step" style="margin-top: 15px;">
+                    <h3>Selecione seus ingredientes:</h3>
+                    <div id="ingredientsGrid"></div>
+                    <div class="acoes">
+                        <button onclick="processarReceitas()" id="buscar">Buscar Receitas</button>
+                        <button onclick="voltarPasso1()" id="voltar">Voltar</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="stepReiniciar" class="control-step" style="margin-top: 15px;">
+                <button onclick="reiniciarBot()">Começar de Novo 🔄</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Receitas da Vovó. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="recipeModal">
+        <button onclick="fecharModal()">Fechar</button>
+        <h2 id="modalTitle"></h2>
+        <h4>Obrigatórios:</h4>
+        <ul id="modalObrigatorios"></ul>
+        <h4>Opcionais:</h4>
+        <ul id="modalOpcionais"></ul>
+        <h4>Modo de Preparo:</h4>
+        <div id="modalPreparo"></div>
+        <br>
+    </div>
+
+    <style>
+        .control-step {
+            display: none;
+        }
+
+        .control-step.active {
+            display: flex;
+        }
+
+        #recipeModal.active {
+            display: flex !important;
+        }
+
+        .recipe-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .recipe-card:hover {
+            background: #f0f0f0;
+        }
+
+        .status-possivel {
+            color: green;
+            font-weight: bold;
+        }
+
+        .status-quase {
+            color: orange;
+            font-weight: bold;
+        }
+    </style>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

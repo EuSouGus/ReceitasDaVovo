@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Salgadas - Vovó</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="css/salgados.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="categoria">
+            <div class="dropdown">
+                <button class="botao-drop">Categorias</button>
+                <div class="conteudo-dropdown">
+                    <a href="doces.html"><iconify-icon icon="streamline-plump:cake-slice-solid" style="font-size: 25px;"></iconify-icon>
+                        Receitas Doces
+                    </a>
+                    <a href="molhos.html"><iconify-icon icon="entypo:bowl" style="font-size: 25px;"></iconify-icon>
+                        Molhos e Acompanhamentos
+                    </a>
+                    <a href="laranjose.html"><iconify-icon icon="mingcute:bird-fill" style="font-size: 25px;"></iconify-icon>
+                        Laranjosé
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <img src="img/logo.png" alt="Logo Receitas">
+        <a href="index.html" style="margin: 0px 5px 0px 0px;"><iconify-icon icon="ic:round-home" style="font-size: 40px; color:#F3B13C;"></iconify-icon></a>
+    </header>
+
+    <section>
+
+    </section>
+
+    <main class="salgados">
+        <div id="salgados"></div>
+    </main>
+
+    <div id="modalSalgados">
+        <button onclick="fecharModal()">Fechar</button>
+        <img src="" alt="" id="imagemModal">
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Receitas da Vovó. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="laranjose-container" style="display:none;">
+        <div id="chatBox"></div>
+        <div id="stepTipo" class="control-step active"></div>
+        <div id="stepIngredientes" class="control-step">
+            <div id="ingredientsGrid"></div>
+        </div>
+        <div id="stepReiniciar" class="control-step"></div>
+    </div>
+
+    <div id="recipeModal">
+        <h2 id="modalTitle"></h2>
+        <ul id="modalObrigatorios"></ul>
+        <ul id="modalOpcionais"></ul>
+        <div id="modalPreparo"></div>
+    </div>
+
+    <style>
+        #modalSalgados.active {
+            display: flex;
+        }
+    </style>
+
+    <script src="js/salgados.js"></script>
+</body>
+
+</html>
